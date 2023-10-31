@@ -1,5 +1,5 @@
 import slackifyMarkdown from 'slackify-markdown';
-import { Editor, MarkdownView, Plugin } from 'obsidian';
+import { Editor, MarkdownView, Plugin, Notice } from 'obsidian';
 
 export default class SlackifyNote extends Plugin {
 	private convertMdToSlack(md: string) {
@@ -25,6 +25,8 @@ export default class SlackifyNote extends Plugin {
 
 				// Copy the slackMarkdown to the clipboard
 				await navigator.clipboard.writeText(slackMarkdown)
+
+				new Notice('Copied note as Slack Markdown')
 			}
 		});
 
@@ -38,6 +40,8 @@ export default class SlackifyNote extends Plugin {
 
 				// Copy the slackMarkdown to the clipboard
 				await navigator.clipboard.writeText(slackMarkdown)
+
+				new Notice('Copied selection as Slack Markdown')
 			}
 		});
 	}
