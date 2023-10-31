@@ -1,10 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "slackify-note",
+	"name": "Slackify Note",
+	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
+	"description": "Converts a note to a Slack-compliant markdown using [slackify-markdown](https://www.npmjs.com/package/slackify-markdown)",
+	"author": "Jeremy Overman",
 	"authorUrl": "https://obsidian.md",
 	"fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": false
