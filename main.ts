@@ -11,6 +11,12 @@ export default class SlackifyNote extends Plugin {
 		// Replace callouts with quotes
 		result = result.replace(/\[\!\w+\][-+]?\s+/, '')
 
+		// Remove zero-width spaces (U+200B) inserted by slackify-markdown around
+		// bold/italic/strikethrough markers. These break Slack formatting on macOS
+		// because Slack treats ZWS as a non-whitespace char that prevents marker
+		// recognition at word boundaries.
+		result = result.replace(/\u200B/g, '')
+
 		return result;
 	}
 
